@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Widget Rating</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<div class="row">
+  <div class="widgetheader" role="header" position="fixed">
+    <div class="container">
+      <div class="widgetLogo">
+        <a href="#/landing">
+          <img class="hidden-print" alt="Widget Rating Logo" src="img/widget_logo.png">
+        </a>
+      </div>
+      <div class="widgetName"><p>PT-MTL WIDGETS</p></div>
+    </div>
+  </div>
+  <div>
+  </div>
+  <div id="pageContentMainFrame">
+    <!-- ########## PAGE CONTENT START ########## -->
+    <div id="pageContent">
+      <div class="container">
+
+        <div ng-view></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <br>
+  <br>
+  <div class="row">
+
+    <input type="image" id="facebook" src="img/facebook.png" onclick="urlRedirect('facebook')" alt="facebook">
+    <input type="image" id="instagram" src="img/instagram.png" onclick="urlRedirect('instagram')" alt="instagram">
+    <input type="image" id="twitter" src="img/twitter.png" onclick="urlRedirect('twitter')" alt="twitter">
+    <input type="image" id="linkedin" src="img/linkedin.png" onclick="urlRedirect('linkedin')" alt="linkedin">
+    <br>
+    <div class="col-lg-12 widget-version">
+      <div style="text-align: center">Widget rating app: v<span app-version></span>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="js/controllers/app.js"></script>
+  <script src="js/controllers/mainController.js"></script>
+  <script src="js/controllers/commentController.js"></script>
+  <script src="js/services/service.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <script src="js/lib/application.js"></script>
+  <script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.validate.min.js"></script>
+
+
+</body>
+</html>

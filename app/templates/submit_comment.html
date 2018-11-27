@@ -1,0 +1,143 @@
+<div id="rateFormSubmit">
+    <div id="widgetForm" class="container">
+        <div id="widget-content">
+            <div class="row">
+                <div id="mainWidget">
+                    <br/>
+                    <br/>
+                    <div class="col-lg-12" style="text-align: right;">
+                        <br/>
+                        <a id="buttonClick" href="" onclick="showDiv()" alt="" width="100">
+                            <img src="../img/widget_button_active_a.png" onmouseover="this.src='../img/widget_button_inactive_i.png'" onmouseout="this.src='../img/widget_button_active_a.png'">
+                        </a>
+
+                        <br/>
+                        <br/>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <br/>
+                        <br/>
+                        <br/>
+
+                        <span id="span-content" class="span-content">We value your feedback</span>
+                        <br/>
+                        <div id="view-comments-link" class="view-comments-link">
+                            <a href="#/comments" ng-click="" class="view-comments-button">[ View comments ]</a>
+                            <br>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                    <div clas="col-lg-4">
+                        <img src="../img/headline_gradient.png" style="width: 100%;">
+                        <br/>
+                    </div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-12" style="text-align: right; margin-left: -25px;">
+                        <span id="span-content_a" class="span-content">We value your rating</span>
+                    </div>
+                </div>
+            </div>
+            <!---/Start - Submit Comments Container Controller/--->
+            <form name="submit_comment_form" role="form" id="submit_comment_form" novalidate>
+            <div id="div-content" class="div-content" ng-controller="commentController as commentcontroller">
+                <div class="row">
+                    <div class="col-lg-3 textLabel">
+                    </div>
+                    <div class="col-lg-3 error-message" ng-show="isFieldValid">{{commentErroMessage.messagefield_error}}</div>
+                    <br/>
+               </div>
+                <div class="row">
+                    <br/>
+                    <div class="col-lg-3 textLabel">
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="form-group">
+                            <div class="form-group form-group-default required" m-key="13">
+                                <textarea rows="4" placeholder="Comments" class="app-textarea" cols="44" name="comments" ng-model="commentcontroller.data.commentsValue" id="comments"></textarea>
+                                <br/>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-3 textLabel">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="form-group form-group-default required">
+                                <input type="text" class="app-textbox" placeholder="Name" maxlength="50" minlength="4" id="name" name="name"
+                                       ng-model="commentcontroller.data.nameValue"
+                                       required ng-minlength="50" ng-maxlength="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" class="app-textbox" id="email" name="email"  placeholder="Email" maxlength="50" minlength="6" ng-model="commentcontroller.data.emailValue"
+                                       required ng-minlength="50" ng-maxlength="50">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 align-star-rating">
+                        <div class="rating-star-type">
+
+                            <ul class="col-lg-12">
+                                <li>
+                                    <input type="radio" ng-value="1" id="A"
+                                           name="rating" ng-model="rating"
+                                           required/><label for="A"><span id="A-img-icon"><span
+                                        class="inner-rating-star-type"></span></span></label>
+                                </li>
+                                <li>
+                                    <input type="radio" ng-value="2" id="B"
+                                           name="rating" ng-model="rating"
+                                           required/><label for="B"><span id="B-img-icon"><span
+                                        class="inner-rating-star-type"></span></span></label>
+                                </li>
+                                <li>
+                                    <input type="radio" ng-value="3" id="C"
+                                           name="rating" ng-model="rating"
+                                           required/><label for="C"><span id="C-img-icon"><span
+                                        class="inner-rating-star-type"></span></span></label>
+                                </li>
+                                <li>
+                                    <input type="radio" ng-value="4" id="D"
+                                           name="rating" ng-ng-value="rating"
+                                           required/><label for="D"><span id="D-img-icon"><span
+                                        class="inner-rating-star-type"></span></span></label>
+                                </li>
+                                <li>
+                                    <input type="radio" ng-value="5" id="E"
+                                           name="rating" ng-model="rating"
+                                           required/><label for="D"><span id="E-img-icon"><span
+                                        class="inner-rating-star-type"></span></span></label>
+                                </li>
+                                </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 align-submit-button">
+                        <br><br>
+                        <a id="buttonSubmit" href="" ng-click="submitWidgetComment()" alt="">
+                            <img src="../img/widget_button_submit_active.png" onmouseover="this.src='../img/widget_button_submit_inacti.png'" onmouseout="this.src='../img/widget_button_submit_active.png'">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </form>
+        <!--/End - Submit Comments Container Controller/-->
+    </div>
+ </div>
+</div>
+
+
+<script>
+    $.validate({
+        lang: 'es'
+    });
+</script>

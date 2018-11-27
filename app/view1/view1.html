@@ -1,0 +1,63 @@
+<p>This is the partial for view 1.</p>
+<div ng-controller="mainController as maincontroller">
+    <div>{{title}}{{email}}</div>
+    <input type="text" ng-model="textValue">
+    <button ng-click="updateTitle()">Update Title</button>
+</div>
+
+                    <!---/Start - Submit Comments Container Controller/--->
+        <div id="div-content" class="div-content" ng-controller="commentController as commentcontroller">
+            <div class="row">
+
+                <div class="col-lg-3 textLabel">
+                </div>
+                <div class="col-md-3 ">
+                    <div class="form-group">
+                        <div class="form-group form-group-default required" m-key="13">
+                            <textarea rows="4" placeholder="Comments" class="app-textarea" cols="44" name="comments" ng-model="commentcontroller.data.commentsValue" id="comments"></textarea>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-3 textLabel">
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div class="form-group form-group-default required">
+                            <input type="text" class="app-textbox" placeholder="Name" maxlength="50" minlength="4" id="name" name="name"
+                                   ng-model="commentcontroller.data.nameValue"
+                                   required ng-minlength="50" ng-maxlength="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" class="app-textbox" id="email" name="email"  placeholder="Email" maxlength="50" minlength="6" ng-model="commentcontroller.data.emailValue"
+                                   required ng-minlength="50" ng-maxlength="50">
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 align-star-rating">
+                    <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 align-star-rating">
+                    {{emailaddress}}
+                    <br><br>
+                    <a id="buttonSubmit" href="" ng-click="submitWidgetComment()" alt="">
+                        <img src="../img/widget_button_submit_active.png" onmouseover="this.src='../img/widget_button_submit_inacti.png'" onmouseout="this.src='../img/widget_button_submit_active.png'">
+                    </a>
+                    <button type="submit" onclick="submitFormData()" value="Submit">Submit</button>
+
+                </div>
+            </div>
+        </div>
+        <!--/End - Submit Comments Container Controller/-->
+

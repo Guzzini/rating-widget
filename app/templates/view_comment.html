@@ -1,0 +1,94 @@
+<div id="rateFormSubmit" ng-controller="mainController as view">
+    <div id="widgetForm" class="container">
+        <div id="widget-content">
+            <div class="row">
+                <div id="mainWidget">
+                    <br/>
+                    <br/>
+                    <div class="col-lg-12" style="text-align: right;">
+                        <br/>
+                        <a id="buttonClick" href="#/landing" alt="" width="100">
+                            <img src="../img/widget_button_home_active.png" onmouseover="this.src='../img/widget_button_home_inactive.png'" onmouseout="this.src='../img/widget_button_home_active.png'">
+                        </a>
+                        <br/>
+                        <br/>
+                    </div>
+
+                    <!--<div class="panel panel-default col-lg-12">-->
+                    <div class="col-lg-12 textValue">
+                        Widgets Comments and Ratings
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+                <div clas="col-lg-4">
+                    <img src="../img/headline_gradient.png" style="width: 100%;">
+                    <br/>
+                    <br>
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-12" style="text-align: right; margin-left: -25px;">
+                </div>
+            </div>
+        </div>
+        <div class="comment-repeater-div">
+        <div class="row">
+        <div ng-repeat="comment in commentList">
+        <div class="comment-div-border">
+            <div class="row">
+                <br/>
+                <br/>
+
+                <div class="col-lg-6 textLabel">
+                <labe>Name</labe>
+            </div>
+            <div class="col-md-6 ">
+                <div class="form-group textValue">
+                    <span>{{comment.nameValue}}</span>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 textLabel">
+                    <label>Email</label>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group textValue">
+                        <span>{{comment.emailValue}}</span>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row">
+                <div class="col-lg-6 textLabel">
+                    <labe>Comments</labe>
+                </div>
+                <div class="col-md-6 textValue">
+                    <span>{{comment.commentsValue}}</span>
+                    <br>
+                    <br>
+                </div>
+        </div>
+            <div class="row">
+                <div class="col-lg-6 textLabel">
+                    <labe>Rating</labe>
+                </div>
+                <div class="col-md-6 textValue">
+                    <span>{{comment.ratingValue}}</span>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<!--End Row>
+        </div>
+</div>
